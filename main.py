@@ -11,3 +11,18 @@ def ascii_maker():
     text = input("\nEnter Your Text: ")
     banner = pyfiglet.figlet_format(f"{text}").upper()
     print(banner)
+def ending():
+    print("\n\nThanks for using the code :)\n")
+    a = input("Do you want to run the program again? (y for yes) (any key for no): ")
+    if a.lower() == 'y':
+        return True
+    else:
+        sys.exit()
+# Main loop
+def run_loop():
+    while True:
+        ascii_maker()
+        if not ending():
+            break
+
+run_loop()
